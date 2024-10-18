@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Примерен HTML документ</title>
+    <meta name="description" content="Това е примерен HTML документ, използващ множество HTML тагове за обучение.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Заглавия -->
+    <header>
+        <h1>Добре дошли в моя примерен сайт</h1>
+        <ul>  
+            <li><a href="index.html">Биография</a></li>  
+            <li><a href="facts.html">Факти</a></li>  
+            <li><a href="gallery.html">галерия</a></li>     
+            <li><a href="contact.html">контакти</a></li>     
+     </ul>
+    </header>
+
+    <!-- Основно съдържание -->
+    <main>
+
+        <!-- Секция 1 -->
+        <section id="section1">
+            <h2>Секция 1: Текстови елементи</h2>
+            <p>Това е <strong>параграф</strong> с няколко <em>текстови</em> елемента. Можете да използвате <mark>подчертаване</mark> за важен текст.</p>
+            <p>Цитат от известна личност:</p>
+            <blockquote cite="https://bg.wikiquote.org/">
+                "Да бъдеш или да не бъдеш, това е въпросът."
+            </blockquote>
+            <p>Адрес:</p>
+            <address>
+                Ул. "Примерна" 123<br>
+                София 1000<br>
+                България
+            </address>
+            <hr>
+        </section>
+
+        <!-- Секция 2 -->
+        <section id="section2">
+            <h2>Секция 2: Списъци и таблици</h2>
+
+            <!-- Ненареден списък -->
+            <h3>Ненареден списък</h3>
+            <ul>
+                <li>Елемент 1</li>
+                <li>Елемент 2
+                    <ul>
+                        <li>Поделемент 2.1</li>
+                        <li>Поделемент 2.2</li>
+                    </ul>
+                </li>
+                <li>Елемент 3</li>
+            </ul>
+
+            <!-- Нареден списък -->
+            <h3>Нареден списък</h3>
+            <ol>
+                <li>Първа стъпка</li>
+                <li>Втора стъпка</li>
+                <li>Трета стъпка</li>
+            </ol>
+
+            <!-- Описание (Definition) списък -->
+            <h3>Списък с описания</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Език за маркиране на хипертекст.</dd>
+                <dt>CSS</dt>
+                <dd>Каскадни стилови листове.</dd>
+                <dt>JavaScript</dt>
+                <dd>Скриптов език за уеб страници.</dd>
+            </dl>
+
+            <!-- Таблица -->
+            <h3>Таблица с данни</h3>
+            <table border="1">
+                <caption>Таблица с оценки</caption>
+                <thead>
+                    <tr>
+                        <th>Име</th>
+                        <th>Предмет</th>
+                        <th>Оценка</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Иван Иванов</td>
+                        <td>Математика</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Мария Петрова</td>
+                        <td>Български език</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Средна оценка</td>
+                        <td>5.5</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <hr>
+        </section>
+
+        <!-- Секция 3 -->
+        <section id="section3">
+            <h2>Секция 3: Мултимедия и формуляри</h2>
+
+            <!-- Изображение -->
+            <h3>Изображение</h3>
+            <figure>
+                <img src="image.jpg" alt="Описание на изображението" width="300" height="200"> // Път до картинка, тази е примерна, може да сложите ваша
+                <figcaption>Фиг.1 - Примерно изображение.</figcaption>
+            </figure>
+
+            <!-- Видеоклип -->
+            <h3>Видео</h3>
+            <video width="320" height="240" controls>
+                <source src="video.mp4" type="video/mp4"> // Път до видео файл, този е примерен, може да сложите ваш
+                Вашият браузър не поддържа видео таг. // Текст, който е видим, ако браузърът не поддържа този таг
+            </video>
+
+            <!-- Аудио -->
+            <h3>Аудио</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg"> // Път до аудио файл, този е примерен, може да сложите ваш
+                Вашият браузър не поддържа аудио таг. // Текст, който е видим, ако браузърът не поддържа този таг
+            </audio>
+
+            <!-- Формуляр -->
+            <h3>Контактен формуляр</h3>
+            <form action="/submit-form" method="post">
+                <label for="fname">Име:</label><br>
+                <input type="text" id="fname" name="firstname" placeholder="Вашето име"><br><br>
+
+                <label for="email">Имейл:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required><br><br>
+
+                <label for="message">Съобщение:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+                <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+                <label for="subscribe"> Абонирайте се за бюлетина</label><br><br>
+
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Мъж</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Жена</label><br><br>
+
+                <label for="country">Държава:</label><br>
+                <select id="country" name="country">
+                    <option value="bg">България</option>
+                    <option value="us">САЩ</option>
+                    <option value="uk">Великобритания</option>
+                </select><br><br>
+
+                <input type="submit" value="Изпрати">
+                <input type="reset" value="Изчисти">
+            </form>
+            <hr>
+        </section>
+
+    </main>
+
+    <!-- Странична лента -->
+    <aside>
+        <h3>Странична лента</h3>
+        <p>Това е допълнителна информация, която може да бъде поставена в страничната лента.</p>
+    </aside>
+
+    <!-- Футър -->
+    <footer>
+        <p>&copy; 2024 Моят сайт</p>
+        <p>Следвайте ни в социалните мрежи:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.twitter.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <!-- Скриптове -->
+    <script src="script.js"></script>
+
+</body>
+</html>
